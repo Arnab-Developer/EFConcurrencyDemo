@@ -28,6 +28,7 @@ catch (DbUpdateConcurrencyException ex)
                 object proposedValue = proposedValues[property];
                 object databaseValue = databaseValues[property];
 
+                // Decide which value should be written to database
                 switch (property.Name)
                 {
                     case nameof(StudentModel.Id):
